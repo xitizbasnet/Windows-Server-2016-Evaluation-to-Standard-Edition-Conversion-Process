@@ -61,3 +61,47 @@ Once the above steps are completed, your server will be successfully converted f
 - Ensure all server-related applications and services are functioning properly after the conversion.
 - If you encounter any activation errors, verify that the server is connected to the KMS server and try activating again.
 - Always back up critical data before making significant system changes.
+
+---
+---
+
+## Easy Step - Final Code
+
+
+## Activating Windows Server Edition via CMD (Administrator)
+
+### Steps for Activation:
+
+1. **Set the Edition and Apply Product Key:**
+   Open CMD as Administrator and execute the following command to set the desired Windows Server edition and enter the product key.
+
+   ```bash
+   dism /online /set-edition:ServerStandard /productkey:WC2BQ-8NRM3-FDDYY-2BFGV-KHKQY /accepteula
+   ```
+
+   - **Note:** The system will prompt you to reboot after executing this command. Type `Y` and press **Enter** to confirm the reboot.
+
+   The system will reboot twice during this process.
+
+2. **Install the Product Key:**
+   Once the system has rebooted, run the following command to install the product key:
+
+   ```bash
+   slmgr /ipk WC2BQ-8NRM3-FDDYY-2BFGV-KHKQY
+   ```
+
+3. **Set KMS Server:**
+   Next, set the KMS (Key Management Service) server by executing the following:
+
+   ```bash
+   slmgr /skms kms8.msguides.com
+   ```
+
+4. **Activate Windows:**
+   Finally, activate Windows using the following command:
+
+   ```bash
+   slmgr /ato
+   ```
+
+---
