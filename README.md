@@ -38,6 +38,10 @@ This document provides the procedure for converting a Windows Server 2016 Evalua
   slmgr /ipk WC2BQ-8NRM3-FDDYY-2BFGV-KHKQY
   ```
 
+  ```bash
+  slmgr /skms kms8.msguides.com
+  ```
+
 ### 6. Activate Windows Server
 - To activate the installed product key, enter the following command:
   ```bash
